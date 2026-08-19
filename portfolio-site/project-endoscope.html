@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ergonomic Endoscope — Xinai Zhang's Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-title">Xinai Zhang's Portfolio</a>
+      <nav class="main-nav">
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="research.html" class="nav-link">Research</a>
+      </nav>
+      <div class="social-links">
+        <a href="mailto:xzhan177@stanford.edu" aria-label="Email">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13Zm2.2.5 7.3 6 7.3-6H4.2Zm15.8 1.4-7.4 6.1a1.5 1.5 0 0 1-1.9 0L4 7.4V18h16V7.4Z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/xinai-zhang/" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.64h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.86V21h-4V9Z"/></svg>
+        </a>
+        <a href="https://github.com/xinaiz977" aria-label="GitHub" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .26.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <a href="projects.html" class="back-link">&larr; Back to Projects</a>
+
+  <main>
+
+    <!-- Hero + Overview -->
+    <section class="section-dark">
+      <div class="section-inner">
+        <div class="hero-split">
+          <div class="hero-split-text" style="text-align: left;">
+            <h1>Ergonomic Redesign of the Flexible Endoscope Control Body</h1>
+            <p>
+              Endoscopy is performed over 20 million times a year in the US, yet
+              more than 62% of endoscopists develop career-long musculoskeletal
+              injuries from operating a device whose control body hasn't
+              meaningfully changed since the 1980s. To understand the problem
+              firsthand, our team interviewed practicing endoscopists, operated
+              an endoscopy simulator to experience the hand and thumb strain
+              directly, and observed live procedures in the OR. Those insights
+              drove a redesign of the control body: a linear slider mechanism in
+              place of the rotational knobs, an adjustable handle spanning the
+              full range of clinical hand sizes, and a resistance module that
+              preserves the tactile wire-tension feedback endoscopists rely on.
+              Testing against a clinical advisor and a comfort survey of
+              practicing users showed measurable improvement across ergonomic
+              metrics.
+            </p>
+            <ul class="tool-chips">
+              <li>SolidWorks</li>
+              <li>3D Printing &amp; Rapid Prototyping</li>
+              <li>User Research</li>
+              <li>Patent Landscape Analysis</li>
+            </ul>
+          </div>
+          <div class="hero-split-images">
+            <div class="hero-split-image">
+              <img src="images/endoscope-diagram.png" alt="Labeled diagram of standard endoscope components: light guide connector, light guide tube, video remote switches, control body, bending section, distal end, and insertion tube" />
+            </div>
+            <div class="hero-split-image">
+              <img src="images/endoscope-product.jpg" alt="The final slider handle control body, held in hand" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Need Statement: blank left column, content on right -->
+    <section class="section-light" style="border-bottom: 1px solid var(--color-border);">
+      <div class="section-inner">
+        <div class="right-offset">
+          <div></div><!-- intentionally empty left -->
+          <div class="right-offset-content">
+            <h2>Need Statement</h2>
+            <p>
+              An intuitive and ergonomic endoscope control section
+              intended to decrease occupational injuries and repetitive
+              strain from procedures, particularly in the hands and thumb
+              by minimizing the force required to operate the knobs and
+              generate adequate torque. The design should be accessible
+              and adjustable for various hand sizes (hand sizes from
+              5th-percentile of female users to 95th percentile of male
+              users), lighter weight than previous models, and require
+              minimal adaptation from existing models. Based on survey
+              data/blind testing on endoscopes, the proposed design should
+              be significantly preferred over previous designs among
+              endoscopists. The design should retain all existing features
+              and functionalities of the current endoscope, including ease
+              of sterilization and maintenance. This device should be
+              reusable and affordable.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- User Research & Requirements -->
+    <section class="section-light">
+      <div class="section-inner">
+        <h2 class="section-heading">User Research &amp; Design Requirements</h2>
+        <div class="needs-map">
+          <div class="needs-map-row">
+            <div class="needs-map-need">
+              <span class="needs-map-tag">User Need</span>
+              <p>Torquing the insertion tube with the right hand while maneuvering the knob with the left involves repetitive pinch forces and thumb strain — existing fixes like knob extenders and hands-free mounts only partially address it.</p>
+            </div>
+            <div class="needs-map-arrow">&rarr;</div>
+            <div class="needs-map-response">
+              <div class="needs-map-response-text">
+                <span class="needs-map-tag">Design Response</span>
+                <p>Replaced the rotational knob with a rack-and-pinion linear slider, moving control to a more intuitive finger motion and reducing thumb-specific loading.</p>
+              </div>
+              <img src="images/endoscope-element1.jpg" alt="Rack and pinion linear slider mechanism" />
+            </div>
+          </div>
+          <div class="needs-map-row">
+            <div class="needs-map-need">
+              <span class="needs-map-tag">User Need</span>
+              <p>Controlling two degrees of freedom without interfering each other.</p>
+            </div>
+            <div class="needs-map-arrow">&rarr;</div>
+            <div class="needs-map-response">
+              <div class="needs-map-response-text">
+                <span class="needs-map-tag">Design Response</span>
+                <p>Slider control at different heights to avoid obstructing the motion range in different tracks.</p>
+              </div>
+              <img src="images/endoscope-element2.jpg" alt="Slider control at different height" />
+            </div>
+          </div>
+          <div class="needs-map-row">
+            <div class="needs-map-need">
+              <span class="needs-map-tag">User Need</span>
+              <p>Injury risk climbs for smaller-handed and female operators, since standard control bodies aren't sized for the full clinical range.</p>
+            </div>
+            <div class="needs-map-arrow">&rarr;</div>
+            <div class="needs-map-response">
+              <div class="needs-map-response-text">
+                <span class="needs-map-tag">Design Response</span>
+                <p>Designed a modular adjustable handle — three components per joint, each with 180&deg; of rotational freedom — so users can configure the geometry to their own hand size and grip.</p>
+              </div>
+              <img src="images/endoscope-element3.jpg" alt="Adjustable handle mechanism" />
+            </div>
+          </div>
+          <div class="needs-map-row">
+            <div class="needs-map-need">
+              <span class="needs-map-tag">User Need</span>
+              <p>Any redesign has to preserve the tactile feedback endoscopists rely on from the actuating wire tension, or the device will feel unfamiliar and erode trust in scope control.</p>
+            </div>
+            <div class="needs-map-arrow">&rarr;</div>
+            <div class="needs-map-response">
+              <div class="needs-map-response-text">
+                <span class="needs-map-tag">Design Response</span>
+                <p>Built a resistance-simulating module that converts wire tension into rotational motion pulling on a syringe, reproducing the same displacement-based feedback.</p>
+              </div>
+              <img src="images/endoscope-element4.jpg" alt="Resistance module close-up" />
+            </div>
+          </div>
+          <div class="needs-map-row">
+            <div class="needs-map-need">
+              <span class="needs-map-tag">User Need</span>
+              <p>Extended contact with the current handle geometry contributes to palm and grip strain over long procedures.</p>
+            </div>
+            <div class="needs-map-arrow">&rarr;</div>
+            <div class="needs-map-response">
+              <div class="needs-map-response-text">
+                <span class="needs-map-tag">Design Response</span>
+                <p>Shaped an ergonomic outer shell that follows the natural contour of the palm, distributing contact pressure more evenly.</p>
+              </div>
+              <img src="images/endoscope-element5.jpg" alt="Ergonomic outer shell" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Design Iterations -->
+    <section class="section-gray">
+      <div class="section-inner">
+        <h2 class="section-heading">Design Iterations</h2>
+        <p class="section-body-text" style="max-width: none;">
+          The control body went through a full pivot before it converged —
+          from a fundamentally different actuation method, to a cheap
+          physical mockup that validated the new direction, to the final
+          design built up feature by feature.
+        </p>
+        <div class="iteration-track">
+          <div class="iteration-card">
+            <div class="iteration-img" style="background-image: url('images/endoscope-approach1-knobs.jpg')"></div>
+            <span class="iteration-version">Concept 0 &mdash; Interchangeable Knobs</span>
+            <p>Kept the rotational knob but made it modular — swappable sets varying in diameter, thickness, shape, and node count. Testing showed it still relied on the same wrist-and-thumb motion driving the original strain, so we abandoned rotational actuation entirely.</p>
+          </div>
+          <div class="iteration-chevron">&rsaquo;</div>
+          <div class="iteration-card">
+            <div class="iteration-img" style="background-image: url('images/endoscope-bike-chain.jpg')"></div>
+            <span class="iteration-version">V1 &mdash; Slider Mockup</span>
+            <p>Built a rough physical mockup of the slider mechanism using a bike chain approximating the rack-and-pinion track, testing the viability of slider mechanism in converting linear motion into rotational motion.</p>
+          </div>
+          <div class="iteration-chevron">&rsaquo;</div>
+          <div class="iteration-card">
+            <div class="iteration-img" style="background-image: url('images/endoscope-element3.jpg')"></div>
+            <span class="iteration-version">V2 &mdash; + Adjustable Handle</span>
+            <p>With the slider motion validated, added a modular adjustable handle — three components per joint, each with 180&deg; of rotational freedom — to address the wide range of hand-sizes.</p>
+          </div>
+          <div class="iteration-chevron">&rsaquo;</div>
+          <div class="iteration-card">
+            <div class="iteration-img">
+              <video controls poster="images/endoscope-slider-handle-render.jpg" aria-label="Final slider handle assembly demo">
+                <source src="videos/endoscope-slider-handle-demo.mp4" type="video/mp4" />
+                Your browser doesn't support embedded video — the file is at
+                videos/endoscope-slider-handle-demo.mp4.
+              </video>
+            </div>
+            <span class="iteration-version">V3 &mdash; + Resistance Module (Final)</span>
+            <p>Added a resistance-simulating module to preserve the tactile wire-tension feedback endoscopists rely on, completing the final assembly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results & Validation -->
+    <section class="section-light">
+      <div class="section-inner">
+        <h2 class="section-heading">Results &amp; Validation</h2>
+        <div class="media-text-row">
+          <img src="images/endoscope-results-radar.png" alt="Radar plot comparing comfort ratings across the standard endoscope, Approach 1, and Approach 2 across five ergonomic metrics" />
+          <div>
+            <p class="section-body-text" style="max-width: none;">
+              A comfort survey (n = 8) rated the standard endoscope against
+              both design approaches across five ergonomic metrics — range
+              of motion, thumb strain, pinch comfort, neutral grip comfort,
+              and crossover ease. The final slider-and-resistance-module
+              design (Approach 2) outperformed the standard endoscope on
+              every axis surveyed.
+            </p>
+            <div class="pull-quote">
+              <p>&ldquo;The adjustable handle allows me to rest my hand&hellip; the design is very simple and easy to use.&rdquo;</p>
+              <cite>&mdash; Dr. Harlan Rich, Clinical Advisor</cite>
+            </div>
+          </div>
+        </div>
+
+        <table class="specs-table" style="margin-top: var(--space-5);">
+          <tbody>
+            <tr><th>User Testing</th><td>n = 8 comfort survey across five ergonomic metrics (Fig. 6)</td></tr>
+            <tr><th>Clinical Feedback</th><td>Qualitative review from clinical advisor Dr. Harlan Rich</td></tr>
+            <tr><th>Manufacturing</th><td>3D-printed prototypes, including an early bike-chain-driven slider prototype</td></tr>
+            <tr><th>CAD Software</th><td>SolidWorks</td></tr>
+            <tr><th>IP Landscape</th><td>Patent landscape analysis conducted to confirm meaningful differentiation from prior art</td></tr>
+          </tbody>
+        </table>
+
+        <p class="section-body-text" style="max-width: none; margin-top: var(--space-4);">
+          <strong>Future iterations:</strong> add a locking mechanism to the
+          slider, consistent with existing endoscope models, and a
+          customizable grip mold on the right side of the control section.
+        </p>
+      </div>
+    </section>
+
+    <!-- My Role -->
+    <section class="section-dark">
+      <div class="section-inner">
+
+        <h2 class="my-role-heading">My Role</h2>
+        <ul class="my-role-list">
+          <li>Designed and CAD-modeled the slider housing body and ergonomic palm-fitting outer shell, iterating through 3D-printed prototypes to refine fit and mechanical function</li>
+          <li>Designed and prototyped the adjustable handle mechanism — three modular components per joint, each with 180&deg; of rotational freedom — allowing users to independently configure the handle geometry to their hand size and grip preference</li>
+          <li>Conducted patent landscape analysis to map existing IP and ensure the design was meaningfully differentiated from prior solutions, informing its path toward market viability</li>
+        </ul>
+        <p class="skills-text">Skills: CAD modeling (SolidWorks), 3D printing and rapid prototyping, ergonomic design, user-centered design, patent analysis</p>
+
+        <h2 class="section-heading">Design Process</h2>
+        <div class="prototype-grid-4">
+
+          <div class="prototype-cell">
+            <div class="prototype-cell-img" style="background-image: url('images/endoscope-process4.jpg')"></div>
+            <span class="prototype-cell-label">Examination of boroscope structure</span>
+          </div>
+
+          <div class="prototype-cell">
+            <div class="prototype-cell-img">
+              <video controls aria-label="Play-Doh mockup for handle and palm contour">
+                <source src="videos/endoscope-process2.mp4" type="video/mp4" />
+                Your browser doesn't support embedded video — the file is at
+                videos/endoscope-process2.mp4.
+              </video>
+            </div>
+            <span class="prototype-cell-label">Play-Doh and beads mockup for endoscope internal structure</span>
+          </div>
+
+          <div class="prototype-cell">
+            <div class="prototype-cell-img" style="background-image: url('images/endoscope-process3.jpg')"></div>
+            <span class="prototype-cell-label">Internal mechanism visual illustration</span>
+          </div>
+
+          <div class="prototype-cell">
+            <div class="prototype-cell-img" style="background-image: url('images/endoscope-process1.jpg')"></div>
+            <span class="prototype-cell-label">2D rough draft of adjustable handle</span>
+          </div>
+
+        </div>
+
+        <nav class="project-nav" style="justify-content: flex-end;">
+          <a href="project-nasaspacesuit.html">NASA Space Suit Redesign &rsaquo;</a>
+        </nav>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    © 2026 Xinai Zhang. Built with HTML &amp; CSS.
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NASA Space Suit Redesign — Xinai Zhang's Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-title">Xinai Zhang's Portfolio</a>
+      <nav class="main-nav">
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="research.html" class="nav-link">Research</a>
+      </nav>
+      <div class="social-links">
+        <a href="mailto:xzhan177@stanford.edu" aria-label="Email">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13Zm2.2.5 7.3 6 7.3-6H4.2Zm15.8 1.4-7.4 6.1a1.5 1.5 0 0 1-1.9 0L4 7.4V18h16V7.4Z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/xinai-zhang/" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.64h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.86V21h-4V9Z"/></svg>
+        </a>
+        <a href="https://github.com/xinaiz977" aria-label="GitHub" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .26.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <a href="projects.html" class="back-link">&larr; Back to Projects</a>
+
+  <main>
+
+    <!-- Full-bleed photo hero -->
+    <div class="hero-banner" style="background-image: url('images/nasa-suit-1.jpg')">
+      <div class="hero-banner-overlay">
+        <h1>Improving the Metabolic Efficiency of Astronaut Gait Cycle in NASA Space Suits Through Biomechanical Interventions</h1>
+      </div>
+    </div>
+
+    <!-- Intro + design requirements -->
+    <section class="section-dark">
+      <div class="section-inner">
+        <p class="section-body-text" style="max-width: none; color: var(--color-bg);">
+          One hidden but significant challenge astronauts face in NASA's
+          current Extravehicular Mobility Unit (EMU) is gas-pressurization,
+          which causes resistive joint torques that fight against natural
+          movement &mdash; leading to fatigue, reduced efficiency, and
+          increased injury risk during planetary missions.
+        </p>
+        <p class="section-body-text" style="max-width: none; color: var(--color-bg);">
+          As joint mobility becomes a top priority for next-generation
+          space suit design, this project explores a passive solution: an
+          exoskeleton informed by a kinematic model of astronaut gait,
+          with a focus on knee articulation. By incorporating a passive
+          assistive mechanism that engages during the high-resistance
+          phases of the gait cycle, the design aims to reduce metabolic
+          costs without adding the weight, complexity, or power
+          requirements of an active system. This work was presented at
+          the NASA Space Grant Consortium.
+        </p>
+
+        <a href="#" class="poster-button">See Our Poster!</a>
+
+        <hr class="section-divider" />
+
+        <h2 class="section-heading">Design Requirements</h2>
+        <div class="system-grid">
+          <div class="system-card system-card--a">
+            <p>
+              Must be compatible with the current EMU envelope and the
+              liquid cooling and ventilation garment.
+            </p>
+          </div>
+          <div class="system-card system-card--a">
+            <p>Add no additional energy requirement to the suit.</p>
+          </div>
+          <div class="system-card system-card--a">
+            <p>Must be able to overcome at least half of the torque (~5 N&middot;m).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prototype design -->
+    <section class="section-light">
+      <div class="section-inner">
+        <h2 class="section-heading">Prototype Design</h2>
+
+        <div class="split-row">
+          <p>
+            The prototype is based on a full-body neoprene wetsuit, chosen
+            to satisfy the compressive fit and thickness constraints of
+            the Liquid Cooling and Ventilation Garment (LCVG) worn beneath
+            the actual EMU. Drawing inspiration from athletic tech suits
+            used by swimmers, which use elastic textiles to compress
+            muscles and stimulate bloodflow during movement, the neoprene
+            suit served as a wearable, flexible base layer onto which the
+            assistive mechanism could be mounted, without altering the
+            suit's overall envelope or adding bulk.
+          </p>
+          <img src="images/nasa-suit-prototype-1.jpg" alt="Full prototype suit with elastic bands worn by a model" />
+        </div>
+
+        <div class="split-row">
+          <img src="images/nasa-suit-prototype-2.jpg" alt="Close-up of elastic band routing at the knee and ankle" />
+          <p>
+            Elastic resistance bands were mounted parallel to the primary
+            axis of force at the knee joint, positioned to engage during
+            the high-resistance phases of the gait cycle. The goal was
+            for the bands to store energy from efficient muscle groups
+            during certain phases of movement and release that energy to
+            assist less efficient muscles during others, effectively
+            redistributing mechanical work across the gait cycle. Bands
+            were designed to be easily interchangeable, allowing
+            different elasticity levels (characterized by their spring
+            constant, K) to be tested and compared against the target
+            assistive torque.
+          </p>
+        </div>
+
+        <div class="split-row split-row--clear" style="margin-bottom: 0;">
+          <p>
+            To evaluate the prototype's performance, a foot-and-knee
+            harness was developed to isolate and measure the force
+            generated by the elastic bands during simulated movement. One
+            end of the elastic band was anchored at the hip using a belt,
+            while the other end connected to a force meter secured by the
+            harness at the leg. This setup allowed controlled, repeatable
+            measurement of force output as the leg moved through a range
+            of motion, enabling direct comparison between different band
+            configurations and providing the data needed to validate the
+            prototype's assistive torque output.
+          </p>
+          <div class="image-strip">
+            <img src="images/nasa-suit-harness.jpg" alt="Force meter attached at the ankle" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testing strategy -->
+    <section class="section-light" style="background: var(--color-bg-soft);">
+      <div class="section-inner">
+        <h2 class="section-heading">Testing Strategy</h2>
+        <p class="section-body-text" style="max-width: none;">
+          To establish a baseline reference and identify materials capable
+          of meeting the target assistive torque, we tested the spring
+          constant of various elastic materials. Using the foot-and-knee
+          harness, elastic bands were anchored at the hip and connected to
+          a force meter at the leg, allowing force output to be measured
+          as the leg moved through the gait cycle. Motion was recorded on
+          camera alongside force meter readings taken at 0.10-second
+          intervals, enabling force data to be synchronized with specific
+          phases of the gait cycle. This approach allowed direct
+          comparison between band configurations and provided the
+          quantitative basis for evaluating the prototype's performance
+          against the project's design requirements.
+        </p>
+
+        <div class="chart-frame">
+          <img src="images/nasa-suit-chart.png" alt="Line chart of elastic force in newtons versus time in seconds, comparing light elastic, heavy elastic, and combined trials" />
+        </div>
+      </div>
+    </section>
+
+    <!-- My role -->
+    <section class="section-dark">
+      <div class="section-inner">
+        <h2 class="section-heading">My Role</h2>
+
+        <div class="media-text-row">
+          <ul class="role-list">
+            <li>
+              Analyzed biomechanical loading in astronaut gait cycles
+              using OpenSim gait models to identify target assistive
+              torque values, directly informing the project's design
+              requirements
+            </li>
+            <li>
+              Conducted mechanical testing on the prototype to
+              characterize material elasticity and quantify assistive
+              torque output, validating the prototype against design
+              targets
+            </li>
+            <li>
+              Collaborated with teammates to develop prototype design and
+              testing protocols, enabling repeatable, quantitative
+              evaluation of prototype performance
+            </li>
+          </ul>
+
+          <div class="system-card system-card--a">
+            <p>
+              Skills applied: biomechanical modeling (OpenSim), gait
+              kinematic analysis, mechanical prototyping, material
+              characterization, force testing, experimental protocol
+              development, data acquisition and analysis
+            </p>
+          </div>
+        </div>
+
+        <nav class="project-nav">
+          <a href="project-endoscope.html">&lsaquo; Ergonomic Endoscope</a>
+          <a href="project-musclemario.html">Muscle Mario &rsaquo;</a>
+        </nav>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    © 2026 Xinai Zhang. Built with HTML &amp; CSS.
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

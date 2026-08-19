@@ -1,0 +1,1934 @@
+/* ===================================================================
+   Xinai Zhang Portfolio — Stylesheet
+   A quiet, editorial look: warm off-white ground, two paired serifs,
+   square gallery tiles that reveal their title on hover, and a
+   peeking horizontal carousel for the CAD work.
+   =================================================================== */
+
+:root {
+  /* Color */
+  --color-bg: #ffffff;
+  --color-bg-soft: #DFE0E1;
+  --color-dark-gray: #39393C;
+  --color-text: #38383B;
+  --color-text-soft: #6f6a62;
+  --color-border: #e7e2d8;
+  --color-accent: #a4724a;
+  --color-overlay: rgba(253, 252, 249, 0.88);
+
+  /* Type */
+  --font-display: "Playfair Display", "Iowan Old Style", Georgia, serif;
+  --font-body: var(--font-display);
+
+  /* Layout */
+  --container-width: 1180px;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: 6rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* ----------------------------- Header ----------------------------- */
+
+.site-header {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.site-title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.6rem;
+  white-space: nowrap;
+}
+
+.main-nav {
+  display: flex;
+  gap: var(--space-4);
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+}
+
+.nav-link {
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.nav-link.active {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.nav-link:hover {
+  color: var(--color-accent);
+}
+
+.social-links {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.social-links a {
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  color: var(--color-text);
+}
+
+.social-links a:hover {
+  color: var(--color-accent);
+}
+
+.social-links svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+/* ------------------------------ Hero ------------------------------- */
+
+.hero {
+  padding: var(--space-6) 0;
+}
+
+.hero-inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+  position: relative;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-style: italic;
+  color: var(--color-text-soft);
+  font-size: 1.05rem;
+  margin: 0 0 var(--space-2);
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  line-height: 1.15;
+  margin: 0 0 var(--space-3);
+}
+
+.hero-lead {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+  line-height: 1.45;
+  margin: 0 0 var(--space-3);
+}
+
+.hero-body {
+  color: var(--color-text-soft);
+  font-size: 1.05rem;
+  margin: 0 0 var(--space-4);
+}
+
+.hero-body a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  padding: 0.8rem 1.6rem;
+  border: 1px solid var(--color-text);
+  border-radius: 999px;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+
+.btn-primary:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.hero-photo {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: 4px;
+  background: linear-gradient(150deg, #ece6d8, #d9cdb4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-3);
+}
+
+.hero-photo span {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #5b5346;
+}
+
+.hero-memoji {
+  position: absolute;
+  top: -90px;
+  right: var(--space-5);
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+@media (max-width: 800px) {
+  .hero-memoji {
+    position: static;
+    display: block;
+    margin: 0 auto var(--space-4);
+  }
+}
+
+/* --------------------------- Page intro ----------------------------- */
+
+.page-intro {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-4) var(--space-5);
+  text-align: left;
+}
+
+.lead-text {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+  line-height: 1.45;
+}
+
+/* -------------------------- Gallery section --------------------------- */
+
+.gallery-section {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--space-4) var(--space-6);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  margin: 0 0 var(--space-4);
+}
+
+.thumb-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+
+.thumb-card {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  display: block;
+  border-radius: 2px;
+}
+
+.thumb-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-overlay);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.thumb-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-2);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.5rem;
+  color: var(--color-text);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 2;
+}
+
+.thumb-card:hover::after,
+.thumb-card:hover .thumb-overlay,
+.thumb-card:focus-visible::after,
+.thumb-card:focus-visible .thumb-overlay {
+  opacity: 1;
+}
+
+.thumb-card:hover .thumb-img,
+.thumb-card:focus-visible .thumb-img {
+  transform: scale(1.04);
+}
+
+.thumb-img {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.5s ease;
+  background-size: cover;
+  background-position: center;
+}
+
+.thumb-1 .thumb-img { background: linear-gradient(135deg, #f6e7b8, #e8c98f); }
+.thumb-2 .thumb-img { background: linear-gradient(135deg, #2c2a4a, #6a4f8c); }
+.thumb-3 .thumb-img { background: linear-gradient(135deg, #eef0e6, #c9d6b8); }
+.thumb-4 .thumb-img { background: linear-gradient(135deg, #cdd9e2, #9fb0a8); }
+.thumb-5 .thumb-img { background: linear-gradient(135deg, #e6d3c3, #b98f6a); }
+.thumb-6 .thumb-img { background: linear-gradient(135deg, #d8e2e0, #97a99e); }
+
+.thumb-placeholder-label {
+  position: absolute;
+  bottom: var(--space-1);
+  left: var(--space-1);
+  font-size: 0.7rem;
+  font-family: var(--font-body);
+  color: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+/* --------------------------- Picture buttons ---------------------------- */
+/* Simple clickable project images, used on the Projects page grids.
+   Drop a real photo in as a background-image (inline style, see HTML) and
+   this fallback color/border disappears underneath it. */
+
+.picture-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+
+.picture-btn {
+  position: relative;
+  display: block;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color-bg-soft);
+  background-size: cover;
+  background-position: center;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* ::before = a light scrim that fades in over the photo on hover.
+   ::after  = the project title, pulled from the data-title attribute,
+              so you only ever need to edit one attribute in the HTML. */
+.picture-btn::before,
+.picture-btn::after {
+  border-radius: inherit;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.picture-btn::before {
+  content: "";
+  background: var(--color-overlay);
+}
+
+.picture-btn::after {
+  content: attr(data-title);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-2);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--color-text);
+  z-index: 2;
+}
+
+.picture-btn:hover,
+.picture-btn:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1);
+}
+
+.picture-btn:hover::before,
+.picture-btn:hover::after,
+.picture-btn:focus-visible::before,
+.picture-btn:focus-visible::after {
+  opacity: 1;
+}
+
+@media (max-width: 800px) {
+  .picture-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .picture-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ------------------------------ Carousel ------------------------------- */
+
+.carousel {
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  gap: var(--space-3);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding-bottom: var(--space-1);
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-item {
+  flex: 0 0 calc((100% - 2 * var(--space-3)) / 3.3);
+  scroll-snap-align: start;
+  margin: 0;
+}
+
+.carousel-thumb {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.cad-1 { background: linear-gradient(135deg, #d7cdb9, #a89472); }
+.cad-2 { background: linear-gradient(135deg, #c7b9a0, #8e7a5c); }
+.cad-3 { background: linear-gradient(135deg, #d3ccb8, #9c8865); }
+.cad-4 { background: linear-gradient(135deg, #ded5c2, #b3a07a); }
+
+figcaption {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  margin-top: var(--space-2);
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 38%;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(33, 30, 26, 0.35);
+  color: #fdfcf9;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+  z-index: 3;
+}
+
+.carousel-btn:hover {
+  background: rgba(33, 30, 26, 0.6);
+}
+
+.carousel-btn-prev { left: var(--space-2); }
+.carousel-btn-next { right: var(--space-2); }
+
+/* --------------------------- Project detail ---------------------------- */
+
+.back-link {
+  display: inline-block;
+  max-width: var(--container-width);
+  margin: var(--space-2) auto var(--space-2);
+  padding: 0 var(--space-4);
+  color: var(--color-text-soft);
+  font-size: 0.95rem;
+}
+
+.back-link:hover {
+  color: var(--color-accent);
+}
+
+.project-detail {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: var(--space-3) var(--space-4) var(--space-6);
+}
+
+.project-header {
+  max-width: 760px;
+  margin: 0 0 var(--space-4);
+}
+
+.project-header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  margin: 0 0 var(--space-1);
+}
+
+.project-meta {
+  color: var(--color-text-soft);
+  font-style: italic;
+}
+
+.project-hero-image {
+  aspect-ratio: 16 / 9;
+  border-radius: 2px;
+  margin-bottom: var(--space-4);
+  background-color: var(--color-bg-soft);
+  background-size: cover;
+  background-position: center;
+}
+
+.project-content {
+  max-width: 720px;
+  font-size: 1.05rem;
+}
+
+.project-content p {
+  margin-bottom: var(--space-3);
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.project-gallery-img {
+  aspect-ratio: 1 / 1;
+  border-radius: 2px;
+}
+
+/* ----------------- Rich project narrative (e.g. Muscle Mario) ----------------- */
+/* A second, more flexible set of section styles for project pages built out
+   of stacked sections (dark intro, demo, accordion, contribution, outlook)
+   rather than the simpler title+content template above. */
+
+.section-dark {
+  background: var(--color-dark-gray);
+  color: var(--color-bg);
+  padding: var(--space-6) var(--space-4);
+}
+
+.section-gray {
+  background: var(--color-bg-soft);
+  color: var(--color-text);
+  padding: var(--space-6) var(--space-4);
+}
+
+.section-light {
+  background: var(--color-bg);
+  color: var(--color-text);
+  padding: var(--space-6) var(--space-4);
+}
+
+.section-inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.project-tagline {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  margin: 0 0 var(--space-4);
+}
+
+/* Opt-in variant, same idea as .skills-text--boxed above. */
+.project-tagline--boxed {
+  display: inline-block;
+  font-size: clamp(1.3rem, 2.2vw, 1.65rem);
+  color: var(--color-text);
+  background: var(--color-bg-soft);
+  padding: var(--space-2) var(--space-4);
+  border-radius: 4px;
+}
+
+.project-hero-lead {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+  line-height: 1.45;
+  max-width: 980px;
+  margin: 0;
+}
+
+.section-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  margin: 0 0 var(--space-4);
+}
+
+.section-body-text {
+  font-size: 1.05rem;
+  max-width: 760px;
+  margin: 0 0 var(--space-4);
+}
+
+/* Media (image/video) on one side, supporting text on the other.
+   Reused for the Demo section and the Signal Processing panel. */
+.media-text-row {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.media-text-row img,
+.media-text-row video {
+  width: 100%;
+  display: block;
+  border-radius: 2px;
+  background: var(--color-bg-soft);
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.demo-legend p {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  margin: 0 0 var(--space-2);
+}
+
+.demo-legend .legend-title {
+  color: var(--color-text-soft);
+  font-style: italic;
+}
+
+.key {
+  display: inline-block;
+  margin-right: var(--space-3);
+}
+
+/* Accordion ("System Design") */
+.accordion {
+  border-top: 1px solid rgba(253, 252, 249, 0.25);
+}
+
+.accordion-item {
+  border-bottom: 1px solid rgba(253, 252, 249, 0.25);
+}
+
+.accordion-item summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+}
+
+.accordion-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-item summary::after {
+  content: "+";
+  font-size: 1.6rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.accordion-item[open] summary::after {
+  content: "\2212";
+}
+
+.accordion-body {
+  background: var(--color-dark-gray);
+  color: var(--color-bg);
+  border-radius: 4px;
+  padding: var(--space-4);
+  margin-bottom: var(--space-3);
+}
+
+.accordion-body p {
+  margin: 0 0 var(--space-2);
+}
+
+.accordion-body ul {
+  margin: 0 0 var(--space-3);
+  padding-left: 1.2em;
+}
+
+.accordion-body li {
+  margin-bottom: var(--space-2);
+}
+
+.skills-line {
+  color: var(--color-bg);
+  margin: 0;
+}
+
+.next-project {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-2);
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: var(--space-4);
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+  border-top: 1px solid var(--color-border);
+}
+
+.next-project:hover {
+  color: var(--color-accent);
+}
+
+@media (max-width: 800px) {
+  .media-text-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ------------- Centered hero variant (e.g. Light-Seeking Rover) ------------- */
+
+.hero-centered {
+  text-align: center;
+}
+
+.hero-centered .project-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3.5vw, 2.6rem);
+  margin: 0 0 var(--space-4);
+}
+
+.hero-centered .project-hero-lead {
+  margin: 0 auto var(--space-4);
+  max-width: 760px;
+  font-size: 1.2rem;
+}
+
+.hero-photo-large {
+  max-width: 760px;
+  margin: 0 auto;
+  aspect-ratio: 4 / 3;
+  background-color: var(--color-bg-soft);
+  background-size: cover;
+  background-position: center;
+  border-radius: 2px;
+}
+
+/* Three-tone System Design card grid */
+.system-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+  align-items: start;
+}
+
+.system-card {
+  padding: var(--space-4);
+  color: var(--color-text);
+}
+
+.system-card h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.6rem;
+  margin: 0 0 var(--space-3);
+}
+
+.system-card p {
+  margin: 0;
+}
+
+.system-card--a { background: #DFE0E1; }
+.system-card--b { background: #A8A6A1; }
+.system-card--c { background: #DFE0E1; }
+
+@media (max-width: 800px) {
+  .system-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Right-aligned contribution paragraph, used inside a .section-dark block */
+.contribution-text {
+  max-width: 760px;
+  margin: 0 0 var(--space-3) auto;
+  font-size: 1.2rem;
+}
+
+.contribution-text:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Prev/next nav living inside a dark section (vs. the light-bg .next-project) */
+.project-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid rgba(253, 252, 249, 0.25);
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+}
+
+.project-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.project-nav a:hover {
+  opacity: 0.75;
+}
+
+/* --------------- Full-bleed photo hero (e.g. NASA Space Suit) --------------- */
+
+.hero-banner {
+  position: relative;
+  display: flex;
+  height: 560px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-banner-tile {
+  flex: 1;
+  background-color: var(--color-bg-soft);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-banner-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.82);
+  padding: var(--space-4) var(--space-5);
+  max-width: 920px;
+  width: 88%;
+  text-align: center;
+}
+
+.hero-banner-overlay h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.6rem, 3.2vw, 2.5rem);
+  line-height: 1.3;
+  margin: 0;
+  color: var(--color-text);
+}
+
+/* Equal two-column row, alternates which side holds the image */
+.split-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  align-items: center;
+  margin-bottom: 0;
+}
+
+/* Pull every row after the first up so it overlaps the tail end of the
+   previous row's (usually taller) image, instead of leaving a big gap
+   of whitespace once the shorter text column finishes.
+   Tweak this pixel value to taste — more negative = more overlap. */
+.split-row:not(:first-child) {
+  margin-top: -160px;
+}
+
+/* Use this instead of relying on the rule above whenever this row's text
+   would land on the same side as the previous row's tall image — that
+   combination causes text to overlap unreadably on top of the image.
+   Positive value = pushes the row down instead of pulling it up. */
+.split-row.split-row--clear {
+  margin-top: 60px;
+}
+
+.split-row img {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 2px;
+  background: var(--color-bg-soft);
+}
+
+/* Thin row of same-size photos, e.g. test-rig detail shots */
+.image-strip {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.image-strip img {
+  flex: 1;
+  min-width: 0;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  background: var(--color-bg-soft);
+  display: block;
+}
+
+.poster-button {
+  display: inline-block;
+  background: rgba(253, 252, 249, 0.18);
+  color: var(--color-bg);
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-display);
+}
+
+.poster-button:hover {
+  background: rgba(253, 252, 249, 0.3);
+}
+
+.section-divider {
+  border: none;
+  border-top: 1px solid rgba(253, 252, 249, 0.25);
+  margin: var(--space-4) 0;
+}
+
+.chart-frame {
+  background: var(--color-bg-soft);
+  padding: var(--space-0);
+  display: inline-block;
+  border-radius: 2px;
+  width: 100%;
+  text-align: center;
+}
+
+.chart-frame img {
+  display: inline-block;
+  width: 800px;
+  text-align: center;
+}
+
+.role-list {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.role-list li {
+  margin-bottom: var(--space-3);
+}
+
+.role-list li:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 800px) {
+  .hero-banner {
+    height: 360px;
+  }
+
+  .hero-banner-overlay {
+    padding: var(--space-3);
+  }
+
+  .split-row {
+    grid-template-columns: 1fr;
+  }
+
+  .split-row:not(:first-child) {
+    margin-top: 0;
+  }
+}
+
+/* -------------- Ergonomic Endoscope page components -------------- */
+ 
+/* Dark hero: left column has centered title + body, right has product photo */
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+  align-items: center;
+}
+ 
+.hero-split-text {
+  text-align: center;
+}
+ 
+.hero-split-text h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.2;
+  margin: 0 0 var(--space-4);
+}
+ 
+.hero-split-text p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0;
+}
+ 
+.hero-split-image {
+  aspect-ratio: 4 / 3;
+  background-color: var(--color-bg-soft);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 2px;
+  overflow: hidden;
+}
+ 
+.hero-split-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Two-photo variant of the hero image slot — a side-by-side pair
+   instead of one single image. Each child .hero-split-image inside
+   this wrapper gets a portrait aspect ratio instead of the single-image
+   4:3, since a pair usually reads better tall than wide. */
+.hero-split-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+.hero-split-images .hero-split-image {
+  aspect-ratio: 3 / 4;
+}
+
+@media (max-width: 500px) {
+  .hero-split-images {
+    grid-template-columns: 1fr;
+  }
+}
+ 
+/* Right-offset section: blank left ~40%, content fills the right */
+.right-offset {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: var(--space-4);
+}
+ 
+.right-offset-content {
+  /* all content lives here, left cell is intentionally empty */
+}
+ 
+.right-offset-content h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  margin: 0 0 var(--space-4);
+}
+ 
+.right-offset-content p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin: 0;
+}
+ 
+/* Numbered design elements — "Element №.N" label + rule + image/text row */
+.design-elements {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-4);
+}
+ 
+.design-elements > h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  text-align: center;
+  margin: 0 0 var(--space-5);
+}
+ 
+.design-element-item {
+  margin-bottom: var(--space-5);
+}
+ 
+.element-label {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  margin: 0 0 var(--space-2);
+}
+ 
+.element-rule {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 0 0 var(--space-4);
+}
+ 
+.element-body {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: var(--space-4);
+  align-items: start;
+}
+ 
+/* Swap image to the right for even-numbered elements */
+.element-body.reverse {
+  grid-template-columns: 1.6fr 1fr;
+}
+ 
+.element-body.reverse .element-img {
+  order: 2;
+}
+ 
+.element-body.reverse .element-desc {
+  order: 1;
+}
+ 
+.element-img {
+  background-color: var(--color-bg-soft);
+  background-size: cover;
+  background-position: center;
+  border-radius: 2px;
+  overflow: hidden;
+}
+ 
+.element-img img,
+.element-img video {
+  width: 100%;
+  display: block;
+  border-radius: 2px;
+}
+ 
+.element-desc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+ 
+/* Four-column prototype grid with text captions */
+.prototype-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+ 
+.prototype-cell {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+ 
+.prototype-cell-img {
+  aspect-ratio: 3 / 4;
+  background-color: rgba(255, 255, 255, 0.08);
+  background-size: cover;
+  background-position: center;
+  border-radius: 2px;
+  overflow: hidden;
+}
+ 
+.prototype-cell-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.prototype-cell-img video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+ 
+.prototype-cell-label {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--color-bg);
+  opacity: 0.85;
+}
+ 
+/* My Role section: large heading flush left, list + skills below */
+.my-role-heading {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  margin: 0 0 var(--space-4);
+}
+ 
+.my-role-list {
+  max-width: 680px;
+  padding-left: 1.2em;
+  margin: 0 0 var(--space-4);
+}
+ 
+.my-role-list li {
+  margin-bottom: var(--space-3);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+ 
+.skills-text {
+  font-size: 1rem;
+  opacity: 0.8;
+  max-width: 680px;
+  margin: 0 0 var(--space-5);
+}
+
+/* Opt-in variant: light rectangle box, slightly larger text. Add the
+   class alongside .skills-text (e.g. class="skills-text skills-text--boxed")
+   on whichever page you want this treatment — the base .skills-text
+   elsewhere is untouched. */
+.skills-text--boxed {
+  display: inline-block;
+  font-size: 1.1rem;
+  opacity: 1;
+  color: var(--color-text);
+  background: var(--color-bg-soft);
+  padding: var(--space-3) var(--space-4);
+  border-radius: 4px;
+}
+ 
+@media (max-width: 800px) {
+  .hero-split,
+  .right-offset,
+  .element-body,
+  .element-body.reverse {
+    grid-template-columns: 1fr;
+  }
+ 
+  .element-body.reverse .element-img,
+  .element-body.reverse .element-desc {
+    order: unset;
+  }
+ 
+  .prototype-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+ 
+
+/* -------------------- Research page -------------------- */
+ 
+.research-hero {
+  position: relative;
+  height: 560px;
+  background-color: var(--color-bg-soft);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+ 
+.research-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.18);
+}
+ 
+.research-hero h1 {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+ 
+.research-intro {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-4);
+  text-align: center;
+}
+ 
+.research-intro p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin: 0 0 var(--space-3);
+}
+ 
+.research-skills-label {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--color-text-soft);
+  margin: 0;
+}
+ 
+.research-section-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  max-width: var(--container-width);
+  margin: 0 auto var(--space-5);
+  padding: 0 var(--space-4);
+}
+ 
+.research-entries {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--space-4) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+ 
+.research-entry {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: var(--space-5);
+  align-items: start;
+}
+ 
+.research-entry-img {
+  aspect-ratio: 4 / 3;
+  background-color: #fff;
+  background-size: cover;
+  background-position: center;
+  border-radius: 2px;
+  overflow: hidden;
+}
+ 
+.research-entry-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+ 
+.research-entry-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-top: var(--space-2);
+}
+ 
+.research-entry-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  margin: 0;
+}
+ 
+.research-entry-role,
+.research-entry-lab,
+.research-entry-dates {
+  font-size: 1rem;
+  color: var(--color-text);
+  margin: 0;
+}
+ 
+.learn-more-btn {
+  display: inline-block;
+  margin-top: var(--space-3);
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-border);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--color-text);
+  text-align: center;
+  width: fit-content;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+ 
+.learn-more-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+ 
+@media (max-width: 800px) {
+  .research-entry {
+    grid-template-columns: 1fr;
+  }
+}
+ 
+/* -------------------- CAD project page components -------------------- */
+/* Reused on any project-cad-*.html page: needs→response map, iteration
+   timeline, multi-view CAD grid, annotated callout showcase, specs table,
+   and a row of software/tool chips. Built to slot into the same
+   section-dark / section-gray / section-light + section-inner scaffolding
+   used elsewhere, so a CAD page can freely mix in .split-row, .system-grid,
+   .media-text-row, etc. from the sections above as needed too. */
+
+/* Tool/software chips, e.g. under the hero meta line */
+.tool-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: var(--space-3) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tool-chips li {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  color: var(--color-text-soft);
+}
+
+/* User need -> design response map */
+.needs-map {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.needs-map-row {
+  display: grid;
+  grid-template-columns: 0.8fr auto 2.2fr;
+  gap: var(--space-3);
+  align-items: center;
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.needs-map-need { grid-column: 1; }
+.needs-map-arrow { grid-column: 2; }
+.needs-map-response { grid-column: 3; }
+
+.needs-map-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.needs-map-tag {
+  display: block;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--color-text-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-1);
+}
+
+.needs-map-need p,
+.needs-map-response p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.needs-map-response {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  background: var(--color-bg-soft);
+  border-radius: 2px;
+}
+
+.needs-map-response-text {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Optional supporting figure inside the response box — omit the whole
+   <img> on rows that don't have one. Sized against the page container
+   rather than the (now much narrower) response box itself. */
+.needs-map-response img {
+  width: calc(var(--container-width) / 3);
+  max-width: 100%;
+  flex-shrink: 0;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  border-radius: 2px;
+  background: var(--color-bg);
+}
+
+.needs-map-arrow {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--color-accent);
+}
+
+/* Design iteration timeline — V1 -> V2 -> V3 with the feedback that drove
+   each change. This is the section that does the most work to show the
+   process was user-centered rather than a single finished design. */
+.iteration-track {
+  display: flex;
+  align-items: stretch;
+  gap: var(--space-3);
+  overflow-x: auto;
+  padding-bottom: var(--space-2);
+}
+
+.iteration-card {
+  flex: 1 1 260px;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.iteration-img {
+  aspect-ratio: 4 / 3;
+  background-color: var(--color-bg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 2px;
+  border: 1px solid var(--color-border);
+}
+
+.iteration-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 2px;
+}
+
+.iteration-img video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 2px;
+}
+
+.iteration-version {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--color-accent);
+}
+
+.iteration-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.iteration-chevron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--color-text-soft);
+}
+
+/* Multi-view CAD grid — orthographic, section, exploded, isometric, etc.
+   Give any figure .cad-view--wide to span the full row (good for an
+   exploded view or a long section cut). */
+.cad-view-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+
+/* Small label above a gallery row — put one before each .cad-view-grid
+   row div when you want to name what that row is showing. */
+.gallery-row-title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--color-text-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 var(--space-2);
+}
+
+/* Row modifiers — use these instead of .cad-view-grid when you want an
+   explicit column count for that row (e.g. 2 on top, 4 below) rather
+   than the default 3-column flow. Stack multiple rows with their own
+   margin-top between them. */
+.cad-view-grid--2col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.cad-view-grid--4col {
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-2);
+}
+
+/* One large image + two smaller ones alongside it. */
+.cad-view-grid--large-2 {
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+.cad-view {
+  margin: 0;
+}
+
+.cad-view--wide {
+  grid-column: 1 / -1;
+}
+
+.cad-view img {
+  width: 100%;
+  display: block;
+  border-radius: 2px;
+  background: var(--color-bg-soft);
+}
+
+.cad-view video {
+  width: 100%;
+  display: block;
+  border-radius: 2px;
+  background: var(--color-bg-soft);
+}
+
+.cad-view figcaption {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--color-text-soft);
+  margin-top: var(--space-2);
+}
+
+/* Annotated callout showcase — numbered pins on a render, paired with a
+   numbered list explaining the reasoning behind each feature. */
+.callout-showcase {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.callout-image {
+  position: relative;
+}
+
+.callout-image img {
+  width: 100%;
+  display: block;
+  border-radius: 2px;
+  background: var(--color-bg-soft);
+}
+
+/* Position each pin with inline style="top: N%; left: N%;" placed over
+   the feature it's pointing to. */
+.callout-pin {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border: 2px solid var(--color-bg);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.callout-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.callout-list li {
+  display: flex;
+  gap: var(--space-2);
+  align-items: flex-start;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.callout-number {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+}
+
+/* Specs / materials / manufacturing table */
+.specs-table {
+  width: 100%;
+  max-width: 760px;
+  border-collapse: collapse;
+}
+
+.specs-table tr {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.specs-table tr:last-child {
+  border-bottom: none;
+}
+
+.specs-table th,
+.specs-table td {
+  text-align: left;
+  padding: var(--space-2) var(--space-3) var(--space-2) 0;
+  font-size: 1rem;
+  vertical-align: top;
+}
+
+.specs-table th {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-text-soft);
+  width: 220px;
+}
+
+@media (max-width: 800px) {
+  .needs-map-row {
+    grid-template-columns: 1fr;
+  }
+
+  .needs-map-response {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .needs-map-response img {
+    width: 100%;
+  }
+
+  .needs-map-arrow {
+    transform: rotate(90deg);
+    width: fit-content;
+  }
+
+  .iteration-track {
+    flex-direction: column;
+  }
+
+  .iteration-chevron {
+    transform: rotate(90deg);
+    align-self: center;
+  }
+
+  .cad-view-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cad-view-grid--2col,
+  .cad-view-grid--4col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cad-view-grid--large-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .callout-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .specs-table th {
+    width: auto;
+  }
+}
+
+/* Pull-quote — short testimonial or feedback callout, e.g. a clinical
+   advisor's comment during user testing */
+.pull-quote {
+  max-width: 700px;
+  margin: var(--space-4) 0;
+  padding-left: var(--space-3);
+  border-left: 3px solid var(--color-accent);
+}
+
+.pull-quote p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 0 0 var(--space-1);
+}
+
+.pull-quote cite {
+  display: block;
+  font-style: normal;
+  font-size: 0.9rem;
+  color: var(--color-text-soft);
+}
+
+/* -------------------- CAD showcase (model-only) page -------------------- */
+/* For pages like project-cad-model-template.html: a lighter template for
+   CAD-only projects without a user-research story. Mostly reuses
+   .cad-view-grid, .callout-showcase, .specs-table, .system-grid, and
+   .tool-chips from the CAD project components above — this is the one
+   new piece, a quick-hit strip of numbers (part count, tolerance, etc.)
+   for signaling technical depth up front. */
+.stat-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+  justify-content: space-between;
+}
+
+.stat-strip-item {
+  flex: 1 1 140px;
+  text-align: center;
+}
+
+.stat-strip-number {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  color: var(--color-accent);
+  line-height: 1;
+  margin-bottom: var(--space-1);
+}
+
+.stat-strip-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-soft);
+}
+
+@media (max-width: 800px) {
+  .stat-strip {
+    justify-content: flex-start;
+    gap: var(--space-4);
+  }
+}
+
+/* -------------------------------- Footer -------------------------------- */
+
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-4);
+  text-align: center;
+  color: var(--color-text-soft);
+  font-size: 0.9rem;
+}
+
+/* -------------------------------- Mobile --------------------------------- */
+
+@media (max-width: 800px) {
+  .header-inner {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-photo {
+    order: -1;
+    aspect-ratio: 16 / 10;
+  }
+
+  .thumb-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .carousel-item {
+    flex: 0 0 calc((100% - var(--space-3)) / 1.5);
+  }
+
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .thumb-grid {
+    grid-template-columns: 1fr;
+  }
+}

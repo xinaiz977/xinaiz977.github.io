@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Autonomous Light-Seeking Rover — Xinai Zhang's Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-title">Xinai Zhang's Portfolio</a>
+      <nav class="main-nav">
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="research.html" class="nav-link">Research</a>
+      </nav>
+      <div class="social-links">
+        <a href="mailto:xzhan177@stanford.edu" aria-label="Email">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13Zm2.2.5 7.3 6 7.3-6H4.2Zm15.8 1.4-7.4 6.1a1.5 1.5 0 0 1-1.9 0L4 7.4V18h16V7.4Z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/xinai-zhang/" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.64h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.86V21h-4V9Z"/></svg>
+        </a>
+        <a href="https://github.com/xinaiz977" aria-label="GitHub" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .26.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <a href="projects.html" class="back-link">&larr; Back to Projects</a>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="section-dark">
+      <div class="section-inner hero-centered">
+        <h1 class="project-title">Autonomous Light-Seeking Rover</h1>
+        <p class="project-hero-lead">
+          By comparing light intensity detected by two oppositely-facing
+          phototransistors, the rover determines its direction and adjusts
+          its motors accordingly, navigating continuously through a
+          custom-built state machine.
+        </p>
+        <div class="hero-photo-large" style="background-image: url('images/rover-circuit.jpg')"></div>
+      </div>
+    </section>
+
+    <!-- System Design -->
+    <section class="section-light">
+      <div class="section-inner">
+        <h2 class="section-heading">System Design</h2>
+
+        <div class="system-grid">
+
+          <div class="system-card system-card--a">
+            <h3>Mechanical Design</h3>
+            <p>
+              The rover consisted of DC motors mounted to a chassis and
+              wired to an Adafruit Motor Shield (V2), which interfaced
+              directly with the Arduino. This shield translated digital
+              commands from the Arduino into motor operations, providing
+              the physical means for the rover to move and turn.
+            </p>
+          </div>
+
+          <div class="system-card system-card--b">
+            <h3>Light-Sensing Circuit</h3>
+            <p>
+              To detect light direction, two PNZ-150 phototransistors
+              were positioned facing opposite directions, each converting
+              incoming light into an electrical current proportional to
+              its intensity. Because the rover's two sides experienced
+              different light levels depending on the source's position,
+              the two phototransistors produced currents of differing
+              magnitudes. A differential op-amp (AD8421) with a high
+              common-mode rejection ratio compared these two currents and
+              amplified their difference, producing a signal proportional
+              to the direction and intensity of the light differential.
+              The op-amp was powered through the Arduino's 5V and ground
+              lines, connected to a 9V battery, with a virtual ground
+              established for stable operation. A digital oscilloscope
+              was used throughout to verify signal behavior and
+              troubleshoot the circuit design.
+            </p>
+          </div>
+
+          <div class="system-card system-card--c">
+            <h3>Navigation Logic</h3>
+            <p>
+              The op-amp's output signal was fed into the Arduino, where
+              it served as the basis for a custom state machine governing
+              the rover's movement. I defined a set of motion states
+              (e.g., moving forward, turning left, turning right) along
+              with the threshold conditions that triggered transitions
+              between them based on the magnitude and sign of the light
+              differential signal. I wrote the control code in Arduino
+              C++, linking the sensing circuit, state machine logic, and
+              motor shield commands into a single cohesive control loop,
+              allowing the rover to continuously sense its surroundings,
+              evaluate its current state, and adjust its motors in real
+              time &mdash; enabling it to autonomously track and follow a
+              moving light source.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- My contribution -->
+    <section class="section-dark">
+      <div class="section-inner">
+        <p class="contribution-text">
+          This project was developed by myself. I designed and built the
+          light-sensing circuit, selecting and positioning the
+          phototransistors and tuning the differential amplifier to
+          reliably detect directional light differences. I also designed
+          the rover's state machine, defining the motion states and
+          transition logic based on sensor output, and wrote all of the
+          Arduino control code that ties the sensing, decision-making,
+          and motor control together into a functioning autonomous
+          system. Verified signal integrity and debugged circuit issues
+          with an oscilloscope, I refined the design through multiple
+          iterations until the rover reliably tracked and followed a
+          light source.
+        </p>
+        <p class="contribution-text">
+          Skills: Analog circuit design, differential amplifier design,
+          sensor integration, embedded systems programming (Arduino
+          C++), state machine design, oscilloscope-based signal
+          troubleshooting
+        </p>
+
+        <nav class="project-nav">
+          <a href="project-musclemario.html">&lsaquo; Muscle Mario</a>
+        </nav>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    © 2026 Xinai Zhang. Built with HTML &amp; CSS.
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
