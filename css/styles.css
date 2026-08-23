@@ -1323,10 +1323,10 @@ figcaption {
 }
  
 .research-intro {
-  max-width: 860px;
+  max-width: 900px;
   margin: 0 auto;
   padding: var(--space-6) var(--space-4);
-  text-align: center;
+  text-align: left;
 }
  
 .research-intro p {
@@ -1339,7 +1339,7 @@ figcaption {
   font-size: 1.05rem;
   font-style: italic;
   color: var(--color-text-soft);
-  margin: 0;
+  margin: var(--space-4) 0 0;  
 }
  
 .research-section-title {
